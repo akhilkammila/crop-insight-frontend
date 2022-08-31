@@ -1,0 +1,35 @@
+.NavBar{
+    width: 97.6vw;
+    height: 13vh;
+    background-color: #01192f;
+    border-radius: 20px;
+    margin: 20px;
+    position:fixed;
+    box-shadow:"0 2px 5px -1px gray";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.name{
+    color: white;
+    width: 50vw;
+    font-size: 5vw;
+}
+#Homebutton{
+    background-color: transparent;
+    color: white;
+    border: solid transparent;
+    border-radius: 10px;
+    font-size:2.5vw;
+    margin: 20px;
+}
+    #Homebutton:hover{
+        outline: white;
+        border: 2px solid #E8E8E8;
+        
+    }
+    #Homebutton:active{
+        border: solid transparent;
+
+    }
