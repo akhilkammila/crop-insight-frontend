@@ -1,6 +1,6 @@
 import { Bar } from 'react-chartjs-2';
 
-function Bar2({data}) {
+function BarContainer({data}) {
   console.log('barcontainer is re-rendering')
   console.log(data)
 
@@ -64,4 +64,4 @@ function Bar2({data}) {
 
 }
 
-export default Bar2;
+export default BarContainer;

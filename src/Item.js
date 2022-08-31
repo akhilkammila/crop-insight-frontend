@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import './Item.css';
 import BarContainer from './BarContainer.js'
+import { Bar } from 'react-chartjs-2';
 
 import {
   Chart as ChartJS,
@@ -29,25 +30,25 @@ ChartJS.register(
 function Item({country}) {
     const labels = ['Maize', 'Sweet Potatoes', 'Wheat', 'Cassava', 'Potatoes', 'Rice', 'Sorghum','Soybeans',"Yams","Other"];
 
-    const [array, setArray] = useState([])
+    const [array, setArray] = useState(null)
     const [data, setData] = useState({
         labels,
         datasets: [
             {
             label: 'Dataset 1',
-            data: array[1],
+            data: null,
             borderColor: 'rgb(255, 99, 132)',
             backgroundColor: 'rgba(255, 99, 132, 1)',
             },
             {
             label: 'Dataset 2',
-            data: array[2],
+            data: null,
             borderColor: 'rgb(53, 162, 235)',
             backgroundColor: 'rgba(53, 162, 235, 1)',
             },
             {
             label: 'Dataset 3',
-            data: array[3],
+            data: null,
             borderColor: 'rgb(53, 162, 235)',
             backgroundColor: 'rgba(53, 162, 235, 1)',
             },
@@ -57,26 +58,26 @@ function Item({country}) {
     // fetches the data when the item first loads
     useEffect(()=>{
         getData()
-        console.log('bout to log the array')
+        console.log('about to log the array')
         console.log(array)
         setData({
             labels,
             datasets: [
                 {
                 label: 'Dataset 1',
-                data: array['data']['0'],
+                data: array ? array['data']['0'] : array,
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 1)',
                 },
                 {
                 label: 'Dataset 2',
-                data: array['data']['1'],
+                data: array ? array['data']['1'] : array,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 1)',
                 },
                 {
                 label: 'Dataset 3',
-                data: array['data']['2'],
+                data: array ? array['data']['2'] : array,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 1)',
                 },
