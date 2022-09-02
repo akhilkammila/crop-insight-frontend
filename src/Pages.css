@@ -47,7 +47,7 @@
   .Row1{
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 180px;
   }
     .CountrySelector{
       width: 40vw;
@@ -57,22 +57,17 @@
       margin: 20px;
     }
   .Board{
-    width: 98vw;
+    overflow-y:scroll;  
   }
     .Row2{
-      display: flex;
-      justify-content: center;
       overflow-y: scroll;
     }
     .Row3{
-      height: 20vh;
-      width: 50vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5vh;
+      overflow-y: scroll;
+      font-size: 50px;
+      margin-top: 50px;
       font-weight: bold;
-      color: red;
+      color: blue;
     }
 
 

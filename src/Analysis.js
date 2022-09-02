@@ -22,12 +22,14 @@ function Analysis(){
                     </h1>
                     <Select className = "CountrySelector" options={options} value ={value} onChange = {changeHandler}/>
                 </div>
-                <div className="Row2">
-                <Item key={value} country={value} ></Item>
+                <div className="Board">
+                    <div className="Row2">
+                        <Item key={value} country={value} ></Item>
+                    </div>
+                    <div className="Row3">
+                        The best crop is: {bestCrop}
+                    </div>
                 </div>
-                <h1 className="Row3">
-                    The best crop is: {bestCrop}
-                </h1>
             </div>
         </Background>
     );
