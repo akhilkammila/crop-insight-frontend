@@ -58,14 +58,20 @@
     }
   .Board{
     overflow-y:scroll;  
-    display: flex;
+    height: 70vh;
+    display:list-item;
   }
     .Row2{
+    display: flex;
+    justify-content: center;
     }
     .Row3{
+      margin-top: 150px;
       font-size: 50px;
       font-weight: bold;
-      color: blue;
+      color: #01192f;
+      display: flex;
+      justify-content: center;
     }
 
 
