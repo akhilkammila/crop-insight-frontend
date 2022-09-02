@@ -35,19 +35,19 @@ function Item({country}) {
         labels,
         datasets: [
             {
-            label: 'Dataset 1',
+            label: '10 Years Ago',
             data: null,
             borderColor: 'rgb(255, 99, 132)',
             backgroundColor: 'rgba(255, 99, 132, 1)',
             },
             {
-            label: 'Dataset 2',
+            label: '30 Years Ago',
             data: null,
             borderColor: 'rgb(53, 162, 235)',
             backgroundColor: 'rgba(53, 162, 235, 1)',
             },
             {
-            label: 'Dataset 3',
+            label: 'Current Countries',
             data: null,
             borderColor: 'rgb(53, 162, 235)',
             backgroundColor: 'rgba(53, 162, 235, 1)',
@@ -64,19 +64,19 @@ function Item({country}) {
             labels,
             datasets: [
                 {
-                label: 'Dataset 1',
+                label: '10 Years Ago',
                 data: array ? array['data']['0'] : array,
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 1)',
                 },
                 {
-                label: 'Dataset 2',
+                label: '30 Years Ago',
                 data: array ? array['data']['1'] : array,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 1)',
                 },
                 {
-                label: 'Dataset 3',
+                label: '30 Years Ago',
                 data: array ? array['data']['2'] : array,
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 1)',
@@ -103,7 +103,6 @@ function Item({country}) {
     
   return (
     <div className="Bar">
-        <h1>hey</h1>
         <BarContainer data={data}/>
     </div>
     );

@@ -2,20 +2,52 @@
   width: 100vw;
 }
 .Home{
-  display: flex;
-  font-size: 5vw;
-  align-items: center;
-  vertical-align: baseline;
-  text-align: center;
-  justify-content: center;
+  display: grid;
+  font-size: 4vw;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.Message{
+  text-align: center;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 190px;
+  margin-left: 50px;
+  margin-right: 50px;
+  vertical-align: baseline;
+  font-weight: bold;
+
+}
+.Start{
+  width: 15vw;
+  height: 7vh;
+  background-color:#01192f ;
+  vertical-align: top;
+  text-align: top;
+  justify-content: top;
+  align-items: top;
+  margin-left: 42vw;
+  border: solid transparent;
+  border-radius: 10px;
+  color: white;
+  font-size: 5vh;
+}
+  .Start:hover{
+    outline: white;
+    border: 2px solid #E8E8E8;
+    
+  }
+  .Start:active{
+    border: solid transparent;
+
+  }
 .Analysis{
   align-items: flex-start;
 }
   .Row1{
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 180px;
   }
     .CountrySelector{
       width: 40vw;
@@ -24,10 +56,19 @@
     .CountryText{
       margin: 20px;
     }
-  .Row2{
-    display: flex;
-    justify-content: center;
+  .Board{
+    overflow-y:scroll;  
   }
+    .Row2{
+      overflow-y: scroll;
+    }
+    .Row3{
+      overflow-y: scroll;
+      font-size: 50px;
+      margin-top: 50px;
+      font-weight: bold;
+      color: blue;
+    }
 
 
 
