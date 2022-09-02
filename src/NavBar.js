@@ -6,7 +6,7 @@ function NavBar(){
     return(
         <h1 className="NavBar">
             <h1 className="name">
-                Crop Tool
+                IntelliFarm
             </h1>
             <Link to="/">
                 <button id = "Homebutton">
