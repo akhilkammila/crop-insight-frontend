@@ -15,7 +15,7 @@ function NavBar(){
             </Link>
             <Link to="/analysis">
                 <button id = "Homebutton">
-                    Crop Analysis
+                    Yield Analysis
                 </button>
             </Link>
             <Link to="/Other">

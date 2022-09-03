@@ -1,6 +1,9 @@
 import { Bar } from 'react-chartjs-2';
 import { Chart } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { green, red } from '@mui/material/colors';
+import Context from '@mui/base/TabsUnstyled/TabsContext';
+import { fontFamily } from '@mui/system';
 Chart.register(ChartDataLabels);
 
 
@@ -13,23 +16,27 @@ function BarContainer({data}) {
         y:{
             grid:{
                 lineWidth:1,
-                color: "#000000",
-                z: -1
+                color: "rgba(0, 0, 0, 0.4)",
+                z: -1,
             },
             ticks:{
                 font:{
                     size: 15,
                     weight: "bold"
                 },
-                color: "#000000"
+                color: "#000000",
+                padding: 80
+            },
+            afterFit(scale){
+                scale.width =200;
             }
         },
         x:{
-            min: -1.5,
-            max: 3.5,
+            min: -0.5,
+            max: 4,
             grid:{
                 lineWidth:1,
-                color: "#000000"
+                color: "rgba(0, 0, 0, 0.4)"
             },
             ticks:{
                 weight: "bold",
@@ -50,7 +57,7 @@ function BarContainer({data}) {
     plugins: {
         legend: {
             position: "top",
-            align: "end"
+            align: "end",
         },
         title: {
             display: true,
@@ -65,7 +72,10 @@ function BarContainer({data}) {
             color: "black",
             align: "left",
             anchor: "end",
-            font: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+            fontFamily: "Comic Sans MS",
+            formatter: function(value) {
+                return Math.abs(value) > 0.1 ? value: ""
+            }
         },
     },
 

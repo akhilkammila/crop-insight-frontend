@@ -59,20 +59,74 @@
   .Board{
     overflow-y:scroll;  
     height: 70vh;
-    display:list-item;
   }
     .Row2{
     display: flex;
     justify-content: center;
     }
+    .Images{
+      display: flex;
+    }
+      #Corn{
+        position: relative;
+        bottom: 560px;
+        left: 167px;
+      }
+      #Sweet_Potato{
+        position: relative;
+        bottom: 485px;
+        left: 115px;
+      }
+      #Wheat{
+        position: relative;
+        bottom: 430px;
+        left: -170px;
+      }
+      #Cassava{
+        position: relative;
+        bottom: 370px;
+        left: 65px;
+      }
+      #Potato{
+        position: relative;
+        bottom: 305px;
+        left: -260px;
+      }
+      #Rice{
+        position: relative;
+        bottom: 260px;
+        left: 5px;
+      }
+      #Sorghum{
+        position: relative;
+        bottom: 190px;
+        left: -75px;
+      }
+      #Soybean{
+        position: relative;
+        bottom: 120px;
+        left: -125px;
+      }
+      #Yam{
+        position: relative;
+        bottom: 60px;
+        left: -215px;
+      }
+      #Other{
+        position: relative;
+        bottom: 0px;
+        left: -300px;
+      }
     .Row3{
-      margin-top: 150px;
-      font-size: 50px;
+      margin-top: 20px;
       font-weight: bold;
       color: #01192f;
       display: flex;
       justify-content: center;
     }
+      #BestCrop{
+        font-size: 60px;
+      }
 
 
 
