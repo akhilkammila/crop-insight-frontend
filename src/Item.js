@@ -27,7 +27,7 @@ ChartJS.register(
 );
 
 
-function Item({country}) {
+function Item({country, setCrop}) {
     const labels = ['Maize', 'Sweet Potatoes', 'Wheat', 'Cassava', 'Potatoes', 'Rice', 'Sorghum','Soybeans',"Yams","Other"];
 
     const [array, setArray] = useState(null)
@@ -60,23 +60,30 @@ function Item({country}) {
         getData()
         console.log('about to log the array')
         console.log(array)
+        if(array){
+          console.log('running')
+          console.log(array['data']['2'])
+          const indexBestCrop = array['data']['2'].indexOf(Math.max(...array['data']['2']));
+          setCrop(indexBestCrop)
+          // setCrop(bestCrop)
+        }
         setData({
             labels,
             datasets: [
                 {
-                label: '10 Years Ago',
+                label: 'Yield vs. 10 Years Ago (%)',
                 data: array ? array['data']['0'] : array,
                 borderColor: 'rgb(255, 25, 104)',
                 backgroundColor: 'rgba(255, 25, 104, 0.7)',
                 },
                 {
-                label: '30 Years Ago',
+                label: 'Yield vs. 30 Years Ago (%)',
                 data: array ? array['data']['1'] : array,
                 borderColor: 'rgb(255, 206, 86)',
                 backgroundColor: 'rgba(255, 206, 86, 0.7)',
                 },
                 {
-                label: '30 Years Ago',
+                label: 'Yield vs. Other Crops (%)',
                 data: array ? array['data']['2'] : array,
                 borderColor: 'rgb(54, 162, 235)',
                 backgroundColor: 'rgba(54, 162, 235, 0.7)',

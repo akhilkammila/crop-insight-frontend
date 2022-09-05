@@ -32,8 +32,8 @@ function BarContainer({data}) {
             }
         },
         x:{
-            min: -0.5,
-            max: 4,
+            min: -50,
+            max: 400,
             grid:{
                 lineWidth:1,
                 color: "rgba(0, 0, 0, 0.4)"
@@ -43,7 +43,10 @@ function BarContainer({data}) {
                 font:{
                     size: 20,
                 },
-                color: "#000000"
+                color: "#000000",
+                callback: function(value, index, ticks) {
+                    return  value + "%";
+                }
             }
         }
     },
@@ -74,7 +77,7 @@ function BarContainer({data}) {
             anchor: "end",
             fontFamily: "Comic Sans MS",
             formatter: function(value) {
-                return Math.abs(value) > 0.1 ? value: ""
+                return Math.abs(value) > 15 ? value+"%": ""
             }
         },
     },

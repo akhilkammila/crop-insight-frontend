@@ -17,7 +17,7 @@ import other from "./images/other.png"
 
 function Analysis(){
     const [value, setValue] = useState('')
-    const [bestCrop, setCrop] = useState('Other Crops')
+    const [bestCrop, setCrop] = useState(1)
     const countries = ['India', 'Pakistan', 'Algeria', 'Brazil', 'Japan', 'Egypt',
     'Angola', 'Mauritius', 'Libya', 'Kazakhstan', 'Madagascar',
     'Mexico', 'Armenia', 'Belarus', 'Canada', 'Australia', 'Argentina',
@@ -50,16 +50,16 @@ function Analysis(){
         console.log(value)
     }
     var dict = {
-        "Corn": [corn,150,150,0,0],
-        "Sweet Potato": [sweet_potato,130,130,20,0],
-        "Cassava": [cassava,130,130,20,0],
-        "Rice": [rice,180,180,0,0],
-        "Sorghum": [sorghum,150,150,0,0],
-        "Soybeans": [soybeans,140,140,20,0],
-        "Wheat":[wheat,120,120,20,0],
-        "Yams": [yam,130,130,30,10],
-        "Potatos": [potato,100,100,20,20],
-        "Other Crops": [other,100,100,20,20]
+        0: [corn,150,150,0,0],
+        1: [sweet_potato,130,130,20,0],
+        2: [cassava,130,130,20,0],
+        3: [rice,180,180,0,0],
+        4: [sorghum,150,150,0,0],
+        5: [soybeans,140,140,20,0],
+        6:[wheat,120,120,20,0],
+        7: [yam,130,130,30,10],
+        8: [potato,100,100,20,20],
+        9: [other,100,100,20,20]
     }
     return (
         <Background>
@@ -72,7 +72,7 @@ function Analysis(){
                 </div>
                 <div className="Board">
                     <div className="Row2">
-                        <Item key={value} country={value} ></Item>
+                        <Item key={value} country={value} setCrop={setCrop}></Item>
                     </div>
                     <div className="Images">
                         <img src = {corn} alt = "Corn Image" height={60} width= {60} id = "Corn"></img>
@@ -87,7 +87,7 @@ function Analysis(){
                         <img src = {other} alt = "Other Plant Image" height={45} width= {45} id = "Other"></img>
                     </div>
                     <div className="Row3">
-                        <h1 id="BestCrop" style={{marginRight:dict[bestCrop][3]}}>IntelliFarm Reccomends Planting {bestCrop} </h1> 
+                        <h1 id="BestCrop" style={{marginRight:dict[bestCrop][3]}}>IntelliFarm Recommends Planting {bestCrop[0]} </h1> 
                         <img src = {dict[bestCrop][0]} alt = "Best Crop" height={dict[bestCrop][1]} width={dict[bestCrop][2]}
                         style={{marginTop:dict[bestCrop][4]}}></img>
                     </div>

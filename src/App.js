@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch,
 
 import Home from './Home';
 import Analysis from "./Analysis";
-import Other from "./Other";
 function App() {
   const [text, setText] = useState("");
   const handleSubmit = (event)=> {
@@ -18,8 +17,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/analysis" element={<Analysis/>}/>
-          <Route path="/Other" element={<Other/>}/>
-
         </Routes>
       </Router>
 

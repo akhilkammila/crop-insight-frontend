@@ -18,11 +18,6 @@ function NavBar(){
                     Yield Analysis
                 </button>
             </Link>
-            <Link to="/Other">
-                <button id = "Homebutton">
-                    Other Tab
-                </button>
-            </Link>
         </h1>
     );
 }
